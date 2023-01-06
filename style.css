@@ -1,0 +1,254 @@
+@font-face{
+	font-family: Mystia;
+	src: url("FONTS/MystiaE0Or.otf");
+}
+
+@font-face{
+	font-family: Majorant;
+	src: url("FONTS/Majorant/Majorant\ Regular.otf")
+}
+
+@font-face{
+	font-family: "LuloCleanW01-OneBold";
+	src: url("FONTS/Lulo Clean W01 One Bold.ttf")
+}
+
+*{
+	box-sizing:border-box;
+}
+
+body{
+	background-image: url("ASSETS/background.png");
+	background-size: 100vw;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	width: 100vw;
+	height: auto;
+	max-width: 100vw;
+	justify-content: center;
+	align-items: center;
+	text-align:center;
+}
+
+.title{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	align-items:center;
+	text-align:center;
+	justify-content:center;
+}
+
+.button{
+	justify-content: center;
+	font-family:"LuloCleanW01-OneBold";
+	color:#ffffff;
+	position:relative;
+	background-color:#6ecfbc;
+	border-radius:5px;
+	border:transparent;
+	align-self:center;
+	cursor: pointer;
+	margin-top: 30px;
+	width: 100%px;
+	height: 50px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top:10px;
+	font-size: 18px;
+	display:inline-flex;
+}
+
+.button:hover{
+    background-color:#f8623f;
+    cursor:pointer;
+}
+
+.button:active{
+    background-color:#f8623f;
+    cursor:pointer;
+}
+
+.instruct-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    height: auto;
+    padding-top: 50px;
+}
+
+.menu-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 17%;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    transition: width 100ms ease-in-out, height 100ms ease-in-out;
+}
+
+.menu-image:hover {
+    width: 19%;
+    height: auto;
+}
+
+.game-info-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-info {
+    color: white;
+    font-family: Majorant;
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 40px;
+    margin: 50px;
+    justify-content: center;
+    perspective: 500px;
+}
+
+.card {
+    position: relative;
+    height: 175px;
+    width: 125px; 
+}
+
+.card-face {
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    border-width: 1px;
+    border-style: solid;
+    transition: transform 500ms ease-in-out;
+}
+
+.card.visible .card-back {
+    transform: rotateY(-180deg);
+}
+
+.card.visible .card-front {
+    transform: rotateY(0);
+}
+
+.card.matched .card-value {
+    animation: pulse 2s linear infinite 500ms;
+}
+
+@keyframes pulse {
+    0% {
+		transform: scale(0.95);
+	}
+
+	70% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(0.95);
+	}
+}
+
+.overlay-text {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: white;
+    font-family: "LuloCleanW01-OneBold";
+    font-weight: bolder;
+}
+
+.overlay-text-small {
+    font-size: .3em;
+    font-family: Majorant;
+    font-weight: 500;
+}
+
+.overlay-text.visible {
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+
+    }
+    to {
+      background-color: rgba(0, 0, 0, .8);
+      font-size: 4em;  
+    }
+}
+
+.card-back {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+.card-front {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    transform: rotateY(180deg);
+}
+
+.card-value {
+    position: absolute;
+    width: 100px;
+    height: 160px;
+    transition: width 100ms ease-in-out, height 100ms ease-in-out;
+}
+
+.card-front:hover .card-value {
+    width: 100px;
+    height: 160px;
+}
+
+.chalk {
+    position: absolute;
+    width: 100px;
+    height: 160px;
+    transition: width 100ms ease-in-out, height 100ms ease-in-out;
+}
+
+.card-back:hover .chalk {
+    width: 100px;
+    height: 160px;
+}
+
+.card-back:hover .dice{
+    height: 75px;
+    transition: top 100ms ease-in-out,
+}
+
+@media (max-width: 600px) {
+    .game-container {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .game-info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

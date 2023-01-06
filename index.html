@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" async></script>
+    <title>REALM 6 - Card Flip</title>
+    <link rel="shortcut icon" type="image/png" href="ASSETS/favicon.png">
+</head>
+<body>
+    <div class="overlay-text visible">
+        Click to Start!
+        <span class="overlay-text-small">Find and match the cards that corresponds to each other</span>
+    </div>
+    <div id="game-over-text" class="overlay-text">
+        GAME OVER!
+        <span class="overlay-text-small">Try Again? Click to Restart!</span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        VICTORY!
+        <span class="overlay-text-small">Congratulations! The final secret code is <b>PRACTICES.</b></span></span>
+        <span class="overlay-text-small">Go back to your journey and head over to the next realm!</span>
+        <button class="button" onclick="window.location.href='https://interaktiv.benilde.edu.ph/?page_id=7881';"> BACK TO MENU </button></a>
+    </div>
+	
+    <div class="title">
+        <img class="title-img" src="ASSETS/realm 9 title-sign.png" height-"69">
+    </div>
+	
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                TIME: <span id="time-remaining">100</span>
+            </div>
+            <div class="game-info">
+                FLIPS: <span id="flips">0</span>
+            </div> 
+        </div>
+		
+        <div class="card">
+        	<div class="card-back card-face">
+                        <img class="chalk" src="ASSETS/NEW BACKFACE.png">
+        	</div>
+        	<div class="card-front card-face">
+                <img class="card-value" src="ASSETS/STRAINS.png">
+        	</div>	
+        </div>
+        <div class="card">
+        	<div class="card-back card-face">
+                        <img class="chalk" src="ASSETS/NEW BACKFACE.png">
+        	</div>
+        	<div class="card-front card-face">
+                <img class="card-value" src="ASSETS/STRAINS.png">
+        	</div>	
+        </div>
+		
+        <div class="card">
+        	<div class="card-back card-face">
+                        <img class="chalk" src="ASSETS/NEW BACKFACE.png">
+        	</div>
+        	<div class="card-front card-face">
+                <img class="card-value" src="ASSETS/AIESEC.png">
+        	</div>	
+        </div>
+        <div class="card">
+        	<div class="card-back card-face">
+                        <img class="chalk" src="ASSETS/NEW BACKFACE.png">
+        	</div>
+        	<div class="card-front card-face">
+                <img class="card-value" src="ASSETS/AIESEC.png">
+        	</div>	
+        </div>
+		
+        <div class="card">
+        	<div class="card-back card-face">
+                        <img class="chalk" src="ASSETS/NEW BACKFACE.png">
+        	</div>
+        	<div class="card-front card-face">
+                <img class="card-value" src="ASSETS/BBB.png">
+        	</div>	
+        </div>
+        <div class="card">
+        	<div class="card-back card-face">
+                        <img class="chalk" src="ASSETS/NEW BACKFACE.png">
+        	</div>
+        	<div class="card-front card-face">
+                <img class="card-value" src="ASSETS/BBB.png">
+        	</div>	
+        </div>
+		
+        <div class="card">
+        	<div class="card-back card-face">
+                        <img class="chalk" src="ASSETS/NEW BACKFACE.png">
+        	</div>
+        	<div class="card-front card-face">
+                <img class="card-value" src="ASSETS/BDA.png">
+        	</div>	
+        </div>
+        <div class="card">
+        	<div class="card-back card-face">
+                        <img class="chalk" src="ASSETS/NEW BACKFACE.png">
+        	</div>
+        	<div class="card-front card-face">
+                <img class="card-value" src="ASSETS/BDA.png">
+        	</div>	
+        </div>
+		
+        <div class="card">
+        	<div class="card-back card-face">
+                        <img class="chalk" src="ASSETS/NEW BACKFACE.png">
+        	</div>
+        	<div class="card-front card-face">
+                <img class="card-value" src="ASSETS/BHIVE.png">
+        	</div>	
+        </div>
+        <div class="card">
+        	<div class="card-back card-face">
+                        <img class="chalk" src="ASSETS/NEW BACKFACE.png">
+        	</div>
+        	<div class="card-front card-face">
+                <img class="card-value" src="ASSETS/BHIVE.png">
+        	</div>	
+        </div>
+		
+        <div class="card">
+        	<div class="card-back card-face">
+                        <img class="chalk" src="ASSETS/NEW BACKFACE.png">
+        	</div>
+        	<div class="card-front card-face">
+                <img class="card-value" src="ASSETS/EMISSARIES.png">
+        	</div>	
+        </div>
+        <div class="card">
+        	<div class="card-back card-face">
+                        <img class="chalk" src="ASSETS/NEW BACKFACE.png">
+        	</div>
+        	<div class="card-front card-face">
+                <img class="card-value" src="ASSETS/EMISSARIES.png">
+        	</div>	
+        </div>
+		
+        <div class="card">
+        	<div class="card-back card-face">
+                        <img class="chalk" src="ASSETS/NEW BACKFACE.png">
+        	</div>
+        	<div class="card-front card-face">
+                <img class="card-value" src="ASSETS/HRMS.png">
+        	</div>	
+        </div>
+        <div class="card">
+        	<div class="card-back card-face">
+                        <img class="chalk" src="ASSETS/NEW BACKFACE.png">
+        	</div>
+        	<div class="card-front card-face">
+                <img class="card-value" src="ASSETS/HRMS.png">
+        	</div>	
+        </div>
+		
+        <div class="card">
+        	<div class="card-back card-face">
+                        <img class="chalk" src="ASSETS/NEW BACKFACE.png">
+        	</div>
+        	<div class="card-front card-face">
+                <img class="card-value" src="ASSETS/SAGA.png">
+        	</div>	
+        </div>
+        <div class="card">
+        	<div class="card-back card-face">
+                        <img class="chalk" src="ASSETS/NEW BACKFACE.png">
+        	</div>
+        	<div class="card-front card-face">
+                <img class="card-value" src="ASSETS/SAGA.png">
+        	</div>	
+        </div>
+    </div>
+</body>
+</html>
